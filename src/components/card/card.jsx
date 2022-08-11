@@ -1,13 +1,10 @@
-import { Component } from "react";
 import { capitalize } from "../../utilities/strings";
 import './card.css'
 
 
-class Card extends Component {
+const Card = ({className, mob}) => {
 
-  render() {
-    const {className} = this.props;
-    const {id, name, img, width, height, isBoss} = this.props.mob;
+    const {id, name, img, width, height, isBoss} = mob;
 
     return <div id={className + '-' + id} className={`${className} card mb-3 shadow`} style={{maxWidth: "18rem"}}>
       {isBoss &&
@@ -21,7 +18,6 @@ class Card extends Component {
         <h5 className="card-title">{capitalize(name, " ")}</h5>
       </div>
     </div>
-  }
 }
 
 export default Card;

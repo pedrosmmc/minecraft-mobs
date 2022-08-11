@@ -11,11 +11,12 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zlib": "^1.0.5"
   },
   "scripts": {
     "start": "npm-run-all --parallel reactstart webservice",
-    "reactstart": "react-scripts start",
+    "reactstart": "BROWSER='chrome' react-scripts start",
     "webservice": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
